@@ -60,7 +60,7 @@ userSearch.addEventListener('keydown' , (event) => {
 // event for "Ver mas" button
 viewMore.addEventListener('click', event => {
     resultsCount ++;
-    let url = `http://api.giphy.com/v1/gifs/search?api_key=${searchKey}&q=`
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${searchKey}&q=`
     let userSearch = document.getElementById('user_search').value;
     url = url.concat(userSearch);
     resultCall(url).then( jsonResults => {

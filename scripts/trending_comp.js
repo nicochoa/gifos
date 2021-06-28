@@ -5,12 +5,12 @@ trendingGifs.addEventListener('scroll', event =>{
     let pos = event.target.scrollLeft - (254 * trendingCount);
     if (250 <= (pos) && (pos) <= 300) {
         trendingCount++;
-        getTrendingGifs(`http://api.giphy.com/v1/gifs/trending?api_key=${trendingKey}&limit=${8*(trendingCount+1)}`);
+        getTrendingGifs(`https://api.giphy.com/v1/gifs/trending?api_key=${trendingKey}&limit=${8*(trendingCount+1)}`);
     }
 })
 
 
-getTrendingGifs(`http://api.giphy.com/v1/gifs/trending?api_key=${trendingKey}&limit=${8*(trendingCount+1)}`);
+getTrendingGifs(`https://api.giphy.com/v1/gifs/trending?api_key=${trendingKey}&limit=${8*(trendingCount+1)}`);
 // // Promise for trending themes
 // function getTrendingThemes(url) {
 //     fetch(url)
