@@ -105,6 +105,9 @@ footer{
         }
     }
     .create-gifo{
+        .record-btns:hover{
+            background-color: transparent;
+        }
         button{
             color: #fff;
             border-color: #fff;
