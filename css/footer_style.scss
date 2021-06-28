@@ -105,15 +105,20 @@ footer{
         }
     }
     .create-gifo{
-        .record-btns:hover{
-            background-color: transparent;
-        }
         button{
             color: #fff;
             border-color: #fff;
             &:hover{
                 background-color: #fff;
                 color: $dark_color_primary; 
+            }
+        }
+        .record-btns:hover{
+            button{
+                &:hover{
+                    background-color: transparent;
+
+                }
             }
         }
     }

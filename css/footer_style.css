@@ -119,10 +119,6 @@ footer {
   color: #37383C;
 }
 
-.darkModeClass .create-gifo .record-btns:hover {
-  background-color: transparent;
-}
-
 .darkModeClass .create-gifo button {
   color: #fff;
   border-color: #fff;
@@ -131,6 +127,10 @@ footer {
 .darkModeClass .create-gifo button:hover {
   background-color: #fff;
   color: #37383C;
+}
+
+.darkModeClass .create-gifo .record-btns:hover button:hover {
+  background-color: transparent;
 }
 
 @media (min-width: 965px) {
