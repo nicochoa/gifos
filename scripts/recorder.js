@@ -68,6 +68,8 @@ stopRecording.addEventListener('click', async()=>{
     repeat.classList.add('displayed_btn');
     stepNumbers[1].classList.remove('on-step');
     stepNumbers[2].classList.add('on-step');
+    stopTimer();
+    
 })
 
 repeat.addEventListener('click', async ()=>{
@@ -76,8 +78,9 @@ repeat.addEventListener('click', async ()=>{
     record.classList.add("onsight");
     stepNumbers[1].classList.add('on-step');
     stepNumbers[2].classList.remove('on-step');
-    timer.classList.add('displayed_btn');
+    timer.classList.remove('not_displayed');
     repeat.classList.remove('displayed_btn');
+
 });
 
 upload.addEventListener('click', async () => {
@@ -167,26 +170,39 @@ linkRecordBtn.addEventListener('click', () => {
 
 
 let recorder;
-let secondsCounter = 0;
-let minutesCounter = 0;
-let hoursCounter = 0;
+let sec;
+let min;
+let hour;
 console.log(seconds);
 function timerCounter(){    
-    setInterval(() => {
+    let secondsCounter = 0;
+    let minutesCounter = 0;
+    let hoursCounter = 0;
+    seconds.textContent = 0 ;
+    minutes.textContent = 0 ;
+    hours.textContent = 0;
+    sec = setInterval(() => {
         if (secondsCounter<100){
             secondsCounter++
             seconds.textContent = secondsCounter;
         } else{secondsCounter = 0;}
     }, 10);
-    setInterval(() => {
+    min = setInterval(() => {
         if (minutesCounter<100){
             minutesCounter++
             minutes.textContent = minutesCounter;
         } else{minutesCounter = 0;}
     }, 100);
-    setInterval(() => {
+    hour = setInterval(() => {
         hoursCounter++
         hours.textContent = hoursCounter;
     }, 1000);
 }
-
+function stopTimer(){
+    clearInterval(sec);
+    clearInterval(min);
+    clearInterval(hour);
+    seconds.textContent = '00' ;
+    minutes.textContent = '00' ;
+    hours.textContent = '00';
+}
