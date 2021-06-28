@@ -105,6 +105,14 @@ footer {
   color: #fff;
 }
 
+.darkModeClass .second h2 {
+  color: #fff;
+}
+
+.darkModeClass .second p {
+  color: #fff;
+}
+
 .darkModeClass footer {
   color: #fff;
 }
