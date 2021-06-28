@@ -1,0 +1,139 @@
+@import "variables";
+
+footer{
+    font-family: $font_text;
+    color: $font_text_color;
+    font-size: $desk_title_size_five;
+    text-align: center;
+}
+.share img {
+    padding: 1.1rem .5rem;
+}
+
+
+.onsight{
+    display: flex;
+}
+.displayed_btn{
+    display: inline;
+}
+.visible{
+    visibility: visible;
+}
+.diplayB{
+    display: block;
+}
+.not_displayed{
+    display: none;
+}
+
+////////////////////dark mode styling
+.darkModeClass{
+    background-color: $dark_color_primary;
+    .pop_img{
+        background-color: $dark_color_primary;
+        .gif-info{
+            color: #fff;
+        }
+    }
+    header{
+        background-color: $dark_color_primary;
+    } 
+    .home_section{
+        h2{
+            color: #fff;
+        }
+    }
+    .desktop_menu{
+        background-color: #000;
+        span{
+            background-color: $dark_color_primary;
+        }
+    }
+    .search_sec{
+        button{
+            background-color:$dark_color_primary;
+        }
+        input{
+            background-color:$dark_color_primary;
+            color: #fff;
+        }
+    }
+    .dividing-line{
+        background-color: #fff;
+    }
+    .btn_view_more{
+        background-color: $dark_color_primary;
+        border-color: #fff;
+        color:#fff;
+        
+    }
+    .btn_view_more:hover{
+        background-color: #fff;
+        color: $dark_color_primary;
+        font-weight: 700;
+    }
+    .trending_themes{
+        color: #fff;
+    }
+    .trending_section{
+        background-color:$dark_color_secundary;
+        color: #fff;
+        p{
+            color: #fff;
+        }
+    }
+    .initial{
+        h2{
+            color: #fff;
+        }
+        p{
+            color: #fff;
+        }
+    }
+    footer{
+        color: #fff;
+    }
+    .steps{
+        p{
+            color: #fff;
+            border-color: #fff;
+        }
+        .on-step{
+            background-color: #fff;
+            color: $dark_color_primary;
+        }
+    }
+    .create-gifo{
+        button{
+            color: #fff;
+            border-color: #fff;
+            &:hover{
+                background-color: #fff;
+                color: $dark_color_primary; 
+            }
+        }
+    }
+}
+
+@media (min-width: 965px){
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3.1rem 9.75rem 3.1rem 9.75rem;
+    }
+    .share{
+        display: flex;
+        gap: 1rem;;
+        align-items: center;
+    }
+    .darkModeClass{
+        .desktop_menu{
+            background-color:$dark_color_primary;
+            a{
+                color: #fff;
+            }
+        }
+    }
+}

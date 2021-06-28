@@ -1,0 +1,107 @@
+@import "variables";
+
+.desktop_menu{
+    display: none;
+    font-family: $font_titles;
+    font-weight: 700;
+    font-size: $mob_title_size_four;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_primary_ligthen;
+    padding: 2rem;
+    height: 110vh;
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        padding: 2rem;
+    }
+    a:hover{
+        text-decoration: underline;
+        text-decoration-color: $color_terciary;
+        text-decoration-thickness: 3px;
+    }
+    span{
+        height: 1px;
+        width: 2rem;
+        background-color: #fff;
+    }
+    img{
+        display: none;
+    }
+
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    background-size: cover;
+    background-color: #fff;
+    top: -5px;
+    border-top: 9px solid #572EE5 ;
+    
+}
+section{
+    margin-top: 1rem;
+}
+nav{
+    padding: 1.82rem 1.37rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.onsight{
+    display: flex;
+}
+
+.close_menu{
+    display: none;
+}
+
+.create-btn{
+    background: url("../assets/CTA-crear-gifo-active-modo-noc.svg");
+}
+
+
+
+@media (min-width: 965px) {
+    nav {
+        display: inline;
+        padding: 1.82rem 0 1.82rem 9.75rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+    .desktop_menu {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: flex;
+        height: inherit;
+        background-color: #fff;
+        flex-direction: row;
+        padding: 0;
+        .div-link{
+            display: none;
+        }
+        a{
+            color: $color_primary;
+        }
+        img{
+            display: inline;
+            padding-right: 7.75rem;
+        }
+    }
+    .ham_menu{
+        display: none;
+    }
+}

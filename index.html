@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/logo-desktop.svg" sizes="any">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/nav_style.css">
+    <link rel="stylesheet" href="./css/main_style.css">
+    <link rel="stylesheet" href="./css/search_results_style.css">
+    <link rel="stylesheet" href="./css/footer_style.css">
+    <title>GIFOS</title>
+</head>
+<body >
+    <header>
+        <nav>
+            <a href="index.html"><img id="gifos-logo" src="../assets/logo-mobile.svg" alt="Page logo"></a>
+            <img class="ham_menu" src="../assets/burger.svg" alt="button hamburguer menu">
+            <img class="close_menu" src="../assets/close.svg" alt="button hamburguer menu">
+        </nav>
+        <div class="desktop_menu  menu-container">
+            <a href="" id="dark-mode-btn">MODO NOCTURNO</a>
+            <span class="div-link"></span>
+            <a href="./pages/favoritos.html" target="_blank" >FAVORITOS</a>
+            <span class="div-link"></span>
+            <a href="./pages/mygifos.html" target="_blank" >MIS GIFOS</a>
+            <span class="div-link"></span>
+            <a href="./pages/createGif.html"><img id="create-gif" src="../assets/button-crear-gifo.svg" alt="button create"></a>
+            
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="home_section">
+                <h2>Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h2>
+                <img class="front_Img" id="home-img" src="./assets/ilustra_header.svg" alt="Front Ilustration">
+                <div class="search_sec">
+                    <form  autocomplete="off">
+                        <img class="search-bar-logo" id="search-logo" src="./assets/icon-search-grey.svg" alt="search bar logo">
+                        <input type="text" id="user_search" placeholder="Busca GIFOS y más">
+                        <button ><img id="btn_close_search" class="close_search"  src="./assets/close.svg" alt="close logo"></button>
+                        <button ><img id="btn_search"  src="../assets/icon-search.svg" alt="search logo"></button>
+                    </form>  
+                    <div class="dividing-line"></div>
+                    <div class="suggestions">
+
+                    </div>
+                </div>
+                <div class="trending_themes">
+                    <h3>Trending</h3>
+                    <p class="trending_themes_text"></p>
+                </div>
+                <div class="search_results">
+                    <div class="line"></div>
+                    <h2 class="result_title">.</h2>
+                    <div class="search_results_container">
+                        <img src="https://via.placeholder.com/300.png?text=1" alt="" class="gif_results">
+                    </div>
+                    <button class="btn_view_more">VER MÁS</button>
+                </div>
+                <div>
+                    
+                </div>
+            </div> 
+        </section>
+        <section class="trending_section">
+            <h3>Trending GIFOS</h3>
+            <p>Mira los últimos <br> GIFOS de nuestra comunidad.</p>
+            <div class="gallery_section">
+                <button><img id="prev-page" src="../assets/button-slider-left.svg" alt="boton atras"></button>
+                <div class="trending_container">
+                    <!-- <img src="https://via.placeholder.com/300.png?text=1" alt="" class="trending_gif_container"> -->
+                </div>
+                <button><img id="next-page" src="../assets/Button-Slider-right.svg" alt="boton adelante"></button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="share">
+            <p>Compartir en:</p>
+            <a href=""><img id="face-btn" src="../assets/icon_facebook.svg" alt=""></a>
+            <a href=""><img id="twit-btn" src="../assets/icon-twitter.svg" alt=""></a>
+            <a href=""><img id="insta-btn" src="../assets/icon_instagram.svg" alt=""></a>
+        </div>
+        <p>&#169; GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    <script src="../scripts/variables.js"></script>
+    <script src="../scripts/functions.js"></script>
+    <script src="../scripts/nav_scripts.js"></script>
+    <script src="./scripts/search_scripts.js"></script>
+    <script src="./scripts/footer_scripts.js"></script>
+    <script src="./scripts/trending_comp.js"></script>
+    <script src="./scripts/trending_themes.js"></script>
+    <script src="./scripts/darkMode.js"></script>
+</body>
+</html>

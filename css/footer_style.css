@@ -1,0 +1,161 @@
+footer {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 0.87rem;
+  text-align: center;
+}
+
+.share img {
+  padding: 1.1rem .5rem;
+}
+
+.onsight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.displayed_btn {
+  display: inline;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.diplayB {
+  display: block;
+}
+
+.not_displayed {
+  display: none;
+}
+
+.darkModeClass {
+  background-color: #37383C;
+}
+
+.darkModeClass .pop_img {
+  background-color: #37383C;
+}
+
+.darkModeClass .pop_img .gif-info {
+  color: #fff;
+}
+
+.darkModeClass header {
+  background-color: #37383C;
+}
+
+.darkModeClass .home_section h2 {
+  color: #fff;
+}
+
+.darkModeClass .desktop_menu {
+  background-color: #000;
+}
+
+.darkModeClass .desktop_menu span {
+  background-color: #37383C;
+}
+
+.darkModeClass .search_sec button {
+  background-color: #37383C;
+}
+
+.darkModeClass .search_sec input {
+  background-color: #37383C;
+  color: #fff;
+}
+
+.darkModeClass .dividing-line {
+  background-color: #fff;
+}
+
+.darkModeClass .btn_view_more {
+  background-color: #37383C;
+  border-color: #fff;
+  color: #fff;
+}
+
+.darkModeClass .btn_view_more:hover {
+  background-color: #fff;
+  color: #37383C;
+  font-weight: 700;
+}
+
+.darkModeClass .trending_themes {
+  color: #fff;
+}
+
+.darkModeClass .trending_section {
+  background-color: #222326;
+  color: #fff;
+}
+
+.darkModeClass .trending_section p {
+  color: #fff;
+}
+
+.darkModeClass .initial h2 {
+  color: #fff;
+}
+
+.darkModeClass .initial p {
+  color: #fff;
+}
+
+.darkModeClass footer {
+  color: #fff;
+}
+
+.darkModeClass .steps p {
+  color: #fff;
+  border-color: #fff;
+}
+
+.darkModeClass .steps .on-step {
+  background-color: #fff;
+  color: #37383C;
+}
+
+.darkModeClass .create-gifo button {
+  color: #fff;
+  border-color: #fff;
+}
+
+.darkModeClass .create-gifo button:hover {
+  background-color: #fff;
+  color: #37383C;
+}
+
+@media (min-width: 965px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3.1rem 9.75rem 3.1rem 9.75rem;
+  }
+  .share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .darkModeClass .desktop_menu {
+    background-color: #37383C;
+  }
+  .darkModeClass .desktop_menu a {
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=footer_style.css.map */

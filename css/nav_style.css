@@ -1,0 +1,134 @@
+.desktop_menu {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.93rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(87, 46, 229, 0.9);
+  padding: 2rem;
+  height: 110vh;
+}
+
+.desktop_menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 2rem;
+}
+
+.desktop_menu a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #50E3C2;
+          text-decoration-color: #50E3C2;
+  text-decoration-thickness: 3px;
+}
+
+.desktop_menu span {
+  height: 1px;
+  width: 2rem;
+  background-color: #fff;
+}
+
+.desktop_menu img {
+  display: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  background-size: cover;
+  background-color: #fff;
+  top: -5px;
+  border-top: 9px solid #572EE5;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+nav {
+  padding: 1.82rem 1.37rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.onsight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.close_menu {
+  display: none;
+}
+
+.create-btn {
+  background: url("../assets/CTA-crear-gifo-active-modo-noc.svg");
+}
+
+@media (min-width: 965px) {
+  nav {
+    display: inline;
+    padding: 1.82rem 0 1.82rem 9.75rem;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #fff;
+  }
+  .desktop_menu {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: inherit;
+    background-color: #fff;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+  }
+  .desktop_menu .div-link {
+    display: none;
+  }
+  .desktop_menu a {
+    color: #572EE5;
+  }
+  .desktop_menu img {
+    display: inline;
+    padding-right: 7.75rem;
+  }
+  .ham_menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=nav_style.css.map */
