@@ -20,7 +20,7 @@ closeMenu.addEventListener('click', () => {
     hamMenu.classList.remove('not_displayed');
 })
 
-if(window.location.pathname !== "/createGif.html"){
+if(! window.location.href.includes("/createGif.html")){
     createGif.addEventListener('mouseover', () => {
         if (localStorage.getItem('darkMode') == "true"){
             createGif.src = "./assets/CTA-crar-gifo-modo-noc.svg";
