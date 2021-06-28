@@ -164,7 +164,7 @@ linkRecordImg.addEventListener('mouseleave', () => {
 linkRecordBtn.addEventListener('click', () => {
     loadGifs(uploadKey , gifId)
     .then(json => {
-        location.href = json.data[0].images.original.url;
+        window.open(json.data[0].images.original.url , '_blank').focus();
     })
 })
 
