@@ -19,17 +19,22 @@ function setDarkMode(){
 }
 
 function removeDarkMode(){
-    if(window.location.pathname !== "/pages/createGif.html"){
-        createGif.src = "./assets/button-crear-gifo.svg";
+    try {
+        if(window.location.pathname !== "/pages/createGif.html"){
+            createGif.src = "./assets/button-crear-gifo.svg";
+        }
+        darkModeBtn.textContent = 'MODO NOCTURNO';
+        page.classList.remove('darkModeClass');
+        gifosLogo.src = "./assets/logo-mobile.svg";
+        hamMenu.src = "./assets/burger.svg";
+        closeMenu.src = "./assets/close.svg";
+        close.src = "./assets/close.svg";
+        nextPage.src = "./assets/Button-Slider-right.svg";
+        prevPage.src = "./assets/button-slider-left.svg";
+        
+    } catch (error) {
+        console.log('Algunos elementos a cambiar no se encuentran en esta pagina 😱', error);
     }
-    darkModeBtn.textContent = 'MODO NOCTURNO';
-    page.classList.remove('darkModeClass');
-    gifosLogo.src = "./assets/logo-mobile.svg";
-    hamMenu.src = "./assets/burger.svg";
-    closeMenu.src = "./assets/close.svg";
-    close.src = "./assets/close.svg";
-    nextPage.src = "./assets/Button-Slider-right.svg";
-    prevPage.src = "./assets/button-slider-left.svg";
 }
 
 function isDark (){
