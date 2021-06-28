@@ -44,7 +44,7 @@ function isDark (){
 
 let loadGifs = async (key , gifIds) => {
     try{
-        let url = `http://api.giphy.com/v1/gifs?api_key=${key}&ids=${gifIds}`;
+        let url = `https://api.giphy.com/v1/gifs?api_key=${key}&ids=${gifIds}`;
         const response = await fetch(url);
         const data = await response.json();
         return data ;
@@ -253,7 +253,7 @@ async function download ( file , fileName){
 
 let suggestions = async (search) => {
     try{
-        let url = `http://api.giphy.com/v1/tags/related/{${search.value}}?api_key=${searchKey}`;
+        let url = `https://api.giphy.com/v1/tags/related/{${search.value}}?api_key=${searchKey}`;
         const response = await fetch(url);
         const data = await response.json();
         return data ;
@@ -298,7 +298,7 @@ function getGifs(event) {
         } while (resultsContainer.children.length > 0);
     }
     
-    let url = `http://api.giphy.com/v1/gifs/search?api_key=${searchKey}&q=`
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${searchKey}&q=`
     userSearch = document.getElementById('user_search').value;
     url = url.concat(userSearch);
     let resultTitle = document.getElementsByClassName('result_title')[0];
