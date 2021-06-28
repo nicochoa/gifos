@@ -66,6 +66,8 @@ stopRecording.addEventListener('click', async()=>{
     stopRecording.classList.remove('onsight');
     timer.classList.add('not_displayed');
     repeat.classList.add('displayed_btn');
+    stepNumbers[1].classList.remove('on-step');
+    stepNumbers[2].classList.add('on-step');
 })
 
 repeat.addEventListener('click', async ()=>{
