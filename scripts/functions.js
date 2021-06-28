@@ -3,16 +3,16 @@
 function setDarkMode(){
     try {
         if(window.location.pathname !== "/pages/createGif.html"){
-            createGif.src = "../assets/CTA-crear-gifo-modo-noc.svg";
+            createGif.src = "./assets/CTA-crear-gifo-modo-noc.svg";
         }
         darkModeBtn.textContent = 'MODO DIURNO';
         page.classList.add('darkModeClass');
-        gifosLogo.src = "../assets/logo-mobile-modo-noct.svg";
-        hamMenu.src = "../assets/burger-modo-noct.svg"
-        closeMenu.src = "../assets/close-modo-noct.svg"
-        close.src = "../assets/Button-close-modo-noc.svg";
-        nextPage.src = "../assets/button-slider-right-md-noct.svg";
-        prevPage.src = "../assets/button-slider-left-md-noct.svg";   
+        gifosLogo.src = "./assets/logo-mobile-modo-noct.svg";
+        hamMenu.src = "./assets/burger-modo-noct.svg"
+        closeMenu.src = "./assets/close-modo-noct.svg"
+        close.src = "./assets/Button-close-modo-noc.svg";
+        nextPage.src = "./assets/button-slider-right-md-noct.svg";
+        prevPage.src = "./assets/button-slider-left-md-noct.svg";   
     } catch (error) {
         console.log('Algunos elementos a cambiar no se encuentran en esta pagina 😱', error)
     }
@@ -20,16 +20,16 @@ function setDarkMode(){
 
 function removeDarkMode(){
     if(window.location.pathname !== "/pages/createGif.html"){
-        createGif.src = "../assets/button-crear-gifo.svg";
+        createGif.src = "./assets/button-crear-gifo.svg";
     }
     darkModeBtn.textContent = 'MODO NOCTURNO';
     page.classList.remove('darkModeClass');
-    gifosLogo.src = "../assets/logo-mobile.svg";
-    hamMenu.src = "../assets/burger.svg";
-    closeMenu.src = "../assets/close.svg";
-    close.src = "../assets/close.svg";
-    nextPage.src = "../assets/Button-Slider-right.svg";
-    prevPage.src = "../assets/button-slider-left.svg";
+    gifosLogo.src = "./assets/logo-mobile.svg";
+    hamMenu.src = "./assets/burger.svg";
+    closeMenu.src = "./assets/close.svg";
+    close.src = "./assets/close.svg";
+    nextPage.src = "./assets/Button-Slider-right.svg";
+    prevPage.src = "./assets/button-slider-left.svg";
 }
 
 function isDark (){
@@ -88,7 +88,7 @@ function popGif (jsonResults , index){
     let close = document.createElement('img');
     close.id = "close";
     close.className = 'icon'
-    close.src = "../assets/close.svg";
+    close.src = "./assets/close.svg";
     popUp.appendChild(close);
     closeGif(close);
     
@@ -111,13 +111,13 @@ function buttonsGif (jsonResults, index , section=null){
     gifBtns.className = "gif-btns";
     if (section == 'misgifos'){
         let btnTrash = document.createElement('img');
-        btnTrash.src = "../assets/icon-trash-normal.svg";
+        btnTrash.src = "./assets/icon-trash-normal.svg";
         btnTrash.className = "icon";
         btnTrash.addEventListener('mouseover', () => {
-            btnTrash.src = "../assets/icon-trash-hover.svg";
+            btnTrash.src = "./assets/icon-trash-hover.svg";
         });
         btnTrash.addEventListener('mouseleave', () => {
-            btnTrash.src = "../assets/icon-trash-normal.svg";
+            btnTrash.src = "./assets/icon-trash-normal.svg";
         });
         btnTrash.addEventListener('click' , () => {
             let myGifosIds = JSON.parse(localStorage.getItem('misgifos')) || [];
@@ -131,12 +131,12 @@ function buttonsGif (jsonResults, index , section=null){
     } else {
         
         let btnFav = document.createElement('img');
-        btnFav.src = "../assets/icon-fav.svg";
+        btnFav.src = "./assets/icon-fav.svg";
         let  favoIds = JSON.parse(localStorage.getItem('favorito')) || []
         if(favoIds.includes(jsonResults.data[index].id)){
-            btnFav.src = "../assets/icon-fav-active.svg";
+            btnFav.src = "./assets/icon-fav-active.svg";
         }else{
-            btnFav.src = "../assets/icon-fav.svg";
+            btnFav.src = "./assets/icon-fav.svg";
         }
         btnFav.className = "icon";
         addFav(btnFav , jsonResults , index);
@@ -145,14 +145,14 @@ function buttonsGif (jsonResults, index , section=null){
     }
     
     let btnDownload = document.createElement('img');
-    btnDownload.src = "../assets/icon-download.svg";
+    btnDownload.src = "./assets/icon-download.svg";
     btnDownload.className = "icon";
     btnDownload.addEventListener('click' , () => {download(jsonResults.data[index].images.downsized.url , jsonResults.data[index].title)});
     btnDownload.addEventListener('mouseover', () => {
-        btnDownload.src = "../assets/icon-download-hover.svg";
+        btnDownload.src = "./assets/icon-download-hover.svg";
     });
     btnDownload.addEventListener('mouseleave', () => {
-        btnDownload.src = "../assets/icon-download.svg";
+        btnDownload.src = "./assets/icon-download.svg";
     });
 
     gifBtns.appendChild(btnDownload);
@@ -190,12 +190,12 @@ function addFav (btnFav , jsonResults , index){
     
     btnFav.addEventListener('mouseover', () => {
         if(btnFav.src.includes("/assets/icon-fav.svg")){
-            btnFav.src = "../assets/icon-fav-hover.svg";
+            btnFav.src = "./assets/icon-fav-hover.svg";
         }
     });
     btnFav.addEventListener('mouseleave', () => {
         if(btnFav.src.includes("/assets/icon-fav-hover.svg")){
-            btnFav.src = "../assets/icon-fav.svg";
+            btnFav.src = "./assets/icon-fav.svg";
         }
     });
 
@@ -205,7 +205,7 @@ function addFav (btnFav , jsonResults , index){
 
             let favIds = JSON.parse(localStorage.getItem('favorito')) || [];
             if(btnFav.src.includes("/assets/icon-fav-hover.svg")){
-                btnFav.src = "../assets/icon-fav-active.svg";
+                btnFav.src = "./assets/icon-fav-active.svg";
                 favIds.push(`${jsonResults.data[index].id}`);
                 localStorage.setItem('favorito' , JSON.stringify(favIds));
                 // localStorage.setItem( `${jsonResults.data[index].id}` , 'favorito');
@@ -215,7 +215,7 @@ function addFav (btnFav , jsonResults , index){
             }else {
                 favIds.splice(favIds.indexOf(`${jsonResults.data[index].id}`) , 1)
                 localStorage.setItem('favorito' , JSON.stringify(favIds));
-                btnFav.src = "../assets/icon-fav-hover.svg";
+                btnFav.src = "./assets/icon-fav-hover.svg";
                 resetContainer(favContainer);
                 checkingStorage('favorito', favContainer , viewMoreFav);
             } 
@@ -268,7 +268,7 @@ function showSuggestions (jsonResults){
         searchSuggestion.className = "search-suggestion";
         let img = document.createElement('img');
         img.className = "search-bar-logo visible";
-        img.src  = "../assets/icon-search-grey.svg";
+        img.src  = "./assets/icon-search-grey.svg";
         let span = document.createElement('span');
         span.textContent = jsonResults.data[index].name;
         searchSuggestion.appendChild(img);
@@ -320,7 +320,7 @@ function getGifs(event) {
 // special result for lorem ipsum and blank/empty inputs
 function loremIpsum (loremText) {
     let searchResult = document.createElement('img');
-    searchResult.src = '../assets/icon-busqueda-sin-resultado.svg';
+    searchResult.src = './assets/icon-busqueda-sin-resultado.svg';
     searchResult.className = "gif_results";
     let loremDescription = document.createElement('p');
     loremDescription.textContent = "Intenta con otra búsqueda.";
@@ -362,17 +362,17 @@ function creatingGifContainer (jsonResults, index, container, section=null){
     gifInfo.className='over-gifs-info';//// cambie esto , antes era classList envez de className
     let expandGif = document.createElement('img');
     expandGif.className = "icon";
-    expandGif.src = "../assets/icon-max-normal.svg";
+    expandGif.src = "./assets/icon-max-normal.svg";
 
     btnsDiv.appendChild(expandGif);
     hovImg.appendChild(btnsDiv);
     hovImg.appendChild(gifInfo);
 
     expandGif.addEventListener('mouseover', () => {
-        expandGif.src = "../assets/icon-max-hover.svg";
+        expandGif.src = "./assets/icon-max-hover.svg";
     });
     expandGif.addEventListener('mouseleave', () => {
-        expandGif.src = "../assets/icon-max-normal.svg";
+        expandGif.src = "./assets/icon-max-normal.svg";
     });
     expandGif.addEventListener('click', () =>popGif(jsonResults, index));
 

@@ -82,7 +82,7 @@ upload.addEventListener('click', async () => {
     let loadScreen = document.createElement('div');
     loadScreen.className = ('on-top-recorder');
     let loadScreenImg = document.createElement('img')
-    loadScreenImg.setAttribute('src' , '../assets/loader.svg');
+    loadScreenImg.setAttribute('src' , './assets/loader.svg');
     let loadScreenPhrase = document.createElement('p');
     loadScreenPhrase.textContent = 'Estamos subiendo tu GIFO';
     loadScreen.appendChild(loadScreenImg);
@@ -106,7 +106,7 @@ upload.addEventListener('click', async () => {
             recordBtns.appendChild(linkRecordBtn);
             loadScreen.insertBefore(recordBtns, loadScreen.firstChild);
 
-            loadScreenImg.setAttribute('src' , '../assets/check.svg');
+            loadScreenImg.setAttribute('src' , './assets/check.svg');
             loadScreenPhrase.textContent = 'GIFO subido con éxito';
 
             let MyGifsIds = JSON.parse(localStorage.getItem('misgifos')) || [];
@@ -121,13 +121,13 @@ let recordBtns = document.createElement('div');
 recordBtns.className ='record-btns';
 let downloadRecordBtn = document.createElement('button');
 let downloadRecordImg = document.createElement('img');
-downloadRecordImg.src = '../assets/icon-download.svg';
+downloadRecordImg.src = './assets/icon-download.svg';
 
 downloadRecordImg.addEventListener('mouseover', () => {
-    downloadRecordImg.src = "../assets/icon-download-hover.svg";
+    downloadRecordImg.src = "./assets/icon-download-hover.svg";
 });
 downloadRecordImg.addEventListener('mouseleave', () => {
-    downloadRecordImg.src = "../assets/icon-download.svg";
+    downloadRecordImg.src = "./assets/icon-download.svg";
 });
 
 downloadRecordImg.addEventListener('click', () => {
@@ -143,13 +143,13 @@ let linkRecordBtn = document.createElement('button');
 let linkRecordLink = document.createElement('a');
 
 let linkRecordImg = document.createElement('img');
-linkRecordImg.src = '../assets/icon-link-normal.svg';
+linkRecordImg.src = './assets/icon-link-normal.svg';
 
 linkRecordImg.addEventListener('mouseover', () => {
-    linkRecordImg.src = "../assets/icon-link-hover.svg";
+    linkRecordImg.src = "./assets/icon-link-hover.svg";
 });
 linkRecordImg.addEventListener('mouseleave', () => {
-    linkRecordImg.src = "../assets/icon-link-normal.svg";
+    linkRecordImg.src = "./assets/icon-link-normal.svg";
 });
 
 linkRecordBtn.addEventListener('click', () => {

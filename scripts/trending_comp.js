@@ -35,13 +35,13 @@ getTrendingGifs(`https://api.giphy.com/v1/gifs/trending?api_key=${trendingKey}&l
 
 
 nextPage.addEventListener('mouseover', () => {
-    nextPage.src = "../assets/Button-Slider-right-hover.svg";
+    nextPage.src = "./assets/Button-Slider-right-hover.svg";
 });
 nextPage.addEventListener('mouseleave', () => {
     if (localStorage.getItem('darkMode') == "true"){
-        nextPage.src = "../assets/button-slider-right-md-noct.svg";
+        nextPage.src = "./assets/button-slider-right-md-noct.svg";
     }else{
-        nextPage.src = "../assets/Button-Slider-right.svg";
+        nextPage.src = "./assets/Button-Slider-right.svg";
     }
 });
 nextPage.addEventListener('click', () => {
@@ -50,13 +50,13 @@ nextPage.addEventListener('click', () => {
 
 
 prevPage.addEventListener('mouseover', () => {
-    prevPage.src = "../assets/button-slider-left-hover.svg";
+    prevPage.src = "./assets/button-slider-left-hover.svg";
 });
 prevPage.addEventListener('mouseleave', () => {
     if (localStorage.getItem('darkMode') == "true"){
-        prevPage.src = "../assets/button-slider-left-md-noct.svg";
+        prevPage.src = "./assets/button-slider-left-md-noct.svg";
     }else{
-        prevPage.src = "../assets/button-slider-left.svg";
+        prevPage.src = "./assets/button-slider-left.svg";
     }
 });
 prevPage.addEventListener('click', () => {

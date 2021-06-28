@@ -1,1 +1,1 @@
-createGif.src = "../assets/CTA-crear-gifo-active-modo-noc.svg";
+createGif.src = "./assets/CTA-crear-gifo-active-modo-noc.svg";
