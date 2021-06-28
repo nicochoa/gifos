@@ -74,6 +74,8 @@ repeat.addEventListener('click', async ()=>{
     await recorder.reset();
     upload.classList.remove('onsight');
     record.classList.add("onsight");
+    stepNumbers[1].classList.add('on-step');
+    stepNumbers[2].classList.remove('on-step');
 });
 
 upload.addEventListener('click', async () => {
