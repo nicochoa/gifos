@@ -2,7 +2,7 @@
 
 function setDarkMode(){
     try {
-        if(window.location.pathname !== "/createGif.html"){
+        if(! window.location.pathname.includes("/createGif.html")){
             createGif.src = "./assets/CTA-crear-gifo-modo-noc.svg";
         }
         darkModeBtn.textContent = 'MODO DIURNO';
@@ -20,7 +20,7 @@ function setDarkMode(){
 
 function removeDarkMode(){
     try {
-        if(window.location.pathname !== "/pages/createGif.html"){
+        if(! window.location.pathname.includes("/createGif.html")){
             createGif.src = "./assets/button-crear-gifo.svg";
         }
         darkModeBtn.textContent = 'MODO NOCTURNO';
